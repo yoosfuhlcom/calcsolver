@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CalcSolver Scientific Calculator</title>
+    <link type="text/css" rel="stylesheet" href="/css/calculator/materialize.min.css" />
+    <link type="text/css" rel="stylesheet" href="/css/calculator/custom.css" />
+</head>
+<body>
+
+    <div class="container center-align calc-card mdl-card mdl-shadow--2dp grey" id="calcy-container">
+  <p class="calc"><strong>Scientific Calculator</strong></p>
+        <div id="screen" class="mdl-textfield">
+            <div id="top" class="top">
+                
+            </div>
+            <div id="bottom" class="screen">
+                0
+            </div>
+        </div>
+        <div class="calc-cell-container white-text keyboard">
+          <div class="command calc-cell waves-effect mobile-hide" data-command="degrad">
+            <span id="deg" class="inactive">Deg</span>  | <span id="rad">Rad</span>
+          </div>
+          <div class="operator calc-cell waves-effect mobile-hide" data-operator="mod">
+            <span>mod</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="floor">
+            <span>floor</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="ceil">
+            <span>ceil</span>
+          </div>
+          <div class="paren calc-cell waves-effect mobile-hide" data-paren="(">
+            <span>(</span>
+          </div>
+          <div class="paren calc-cell waves-effect mobile-hide" data-paren=")">
+            <span>)</span>
+          </div>
+          <div class="command calc-cell waves-effect" data-command="clear">
+            <span>C</span>
+          </div>
+          <div class="command calc-cell waves-effect" data-command="backspace">
+            <span>&#27;</span>
+          </div>
+          <div class="function calc-cell waves-effect" data-function="percent">
+            <span>%</span>
+          </div>
+          <div class="modifier calc-cell waves-effect" data-modifier="plusminus" id="plusminus">
+            <span>+/-</span>
+          </div>
+      
+          <div class="function calc-cell waves-effect mobile-hide" data-function="sin">
+            <span>sin</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="cos">
+            <span>cos</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="tan">
+            <span>tan</span>
+          </div>
+          <div class="constant calc-cell waves-effect mobile-hide" data-constant="pi">
+            <span>&pi;</span>
+          </div>
+          <div class="constant calc-cell waves-effect mobile-hide" data-constant="2pi">
+            <span>2&pi;</span>
+          </div>
+          <div class="operator calc-cell waves-effect mobile-hide " data-operator="choose">
+            <span>choose</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text " data-value="7">
+            <span>7</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text" data-value="8">
+            <span>8</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text" data-value="9">
+            <span>9</span>
+          </div>
+          <div class="operator calc-cell waves-effect" data-operator="/">
+            <span>&#247;</span>
+          </div>
+    
+          <div class="function calc-cell waves-effect mobile-hide" data-function="sin_i">
+            <span>sin<sup>-1</sup></span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="cos_i">
+            <span>cos<sup>-1</sup></span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="tan_i">
+            <span>tan<sup>-1</sup></span>
+          </div>
+          <div class="constant calc-cell waves-effect mobile-hide" data-constant="E">
+            <span>e</span>
+          </div>
+          <div class="constant calc-cell waves-effect mobile-hide" data-constant="2E">
+            <span>2e</span>
+          </div>
+          <div class="operator calc-cell waves-effect mobile-hide" data-operator="permute">
+            <span>permute</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text" data-value="4">
+            <span>4</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text" data-value="5">
+            <span>5</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text" data-value="6">
+            <span>6</span>
+          </div>
+          <div class="operator calc-cell waves-effect" data-operator="*">
+            <span>&#215;</span>
+          </div>
+      
+          <div class="function calc-cell waves-effect mobile-hide" data-function="square">
+            <span>x<sup>2</sup></span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="cube">
+            <span>x<sup>3</sup></span>
+          </div>
+          <div class="operator calc-cell waves-effect mobile-hide" data-operator="^">
+            <span>x<sup>y</sup></span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="inverse">
+            <span>x<sup>-1</sup></span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="factorial">
+            <span>x!</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="sqrt">
+            <span>&radic;</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text " data-value="1">
+            <span>1</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text " data-value="2">
+            <span>2</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text " data-value="3">
+            <span>3</span>
+          </div>
+          <div class="operator calc-cell waves-effect" data-operator="-">
+            <span>-</span>
+          </div>
+      
+          <div class="function calc-cell waves-effect mobile-hide" data-function="cbrt">
+            <span><sup>3</sup>&radic;</span>
+          </div>
+          <div class="operator calc-cell waves-effect mobile-hide" data-operator="root">
+            <span><sup>x</sup>&radic;</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="log10">
+            <span>log</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="ln">
+            <span>ln</span>
+          </div>
+          <div class="function calc-cell waves-effect mobile-hide" data-function="e_x">
+            <span>e<sup>x</sup></span>
+          </div>
+          <div class="constant calc-cell waves-effect mobile-hide" data-constant="random">
+            <span>rand</span>
+          </div>
+          <div class="modifier calc-cell waves-effect white black-text" data-modifier="decimal" id="decimal">
+            <span>.</span>
+          </div>
+          <div class="number calc-cell waves-effect white black-text" data-value="0">
+            <span>0</span>
+          </div>
+          <div class="command calc-cell waves-effect orange black-text" data-command="evaluate" id="equals">
+            <span>=</span>
+          </div>
+          <div class="operator calc-cell waves-effect" data-operator="+">
+            <span >+</span>
+          </div>
+        </div>
+  </div>
+
+<script src="/js/calculator/materialize.min.js"></script>
+<script src='/js/calculator/expression.js'></script>
+<script src="/js/calculator/calculator.js"></script>
+      
+<script>
+      var calc;
+      // init
+      addEventListener('DOMContentLoaded', function() {
+          calc = new Calculator();
+          // prevent page scrolling
+          document.body.addEventListener('touchmove', function(e) {
+              e.preventDefault();
+              return false;
+          }, false);
+      }, false);
+</script>
+</body>
+</html>
